@@ -12,11 +12,11 @@ public class ZooCatalog {
         loadCatalog();
     }
 
-    public void addNameToAnimal(String animal, String name) {
+    public void addAnimal(String animal, String name) {
         if (!animalMap.containsKey(animal)) {
             animalMap.put(animal, name);
             saveCatalog();
-            System.out.println("Name '" + name + "' added to animal '" + animal + "' successfully.");
+            System.out.println("My name is " + name +" and I am "+ animal);
         } else {
             System.out.println("Animal '" + animal + "' already exists.");
         }
@@ -47,7 +47,7 @@ public class ZooCatalog {
             saveCatalog();
             System.out.println("Animal '" + animal + "' entry deleted successfully.");
         } else {
-            System.out.println("Animal '" + animal + "' does not exist.");
+            System.out.println("Animal " + animal + " does not exist.");
         }
     }
 
@@ -63,7 +63,7 @@ public class ZooCatalog {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Failed to load the zoo catalog.");
+            System.out.println("Failed to load");
             e.printStackTrace();
         }
     }
@@ -75,7 +75,7 @@ public class ZooCatalog {
                 writer.newLine();
             }
         } catch (IOException e) {
-            System.out.println("Failed to save the zoo catalog.");
+            System.out.println("Failed to save");
             e.printStackTrace();
         }
     }

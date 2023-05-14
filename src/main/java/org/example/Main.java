@@ -5,9 +5,14 @@ public class Main {
 
         ZooCatalog zooCatalog = new ZooCatalog();
 
+        zooCatalog.addAnimal("Caine", "Rex");
+        zooCatalog.addAnimal("Maimuta", "Lola");
+        zooCatalog.addAnimal("Tigru", "Zorro");
+        zooCatalog.addAnimal("Leu", "Regele");
 
-        zooCatalog.addNameToAnimal("Lion", "Simba");
-        zooCatalog.addNameToAnimal("Elephant", "Dumbo");
+        zooCatalog.updateNameOfAnimal("Tigru", "Pisicuta");
+
+        zooCatalog.deleteAnimal("Caine");
 
     }
 }
